@@ -9,6 +9,11 @@
             <mxGeometry x="50" y="70" width="420" height="1120" as="geometry" />
           </mxCell>
         </UserObject>
+        <UserObject label="import uuid&#xa;from datetime import datetime&#xa;&#xa;&#xa;BASE_TEST_HEADER = {&#xa;    &quot;System-Id&quot;: str(uuid.uuid4()),&#xa;    &quot;Request-Id&quot;: str(uuid.uuid4()),&#xa;    &quot;Request-Time&quot;: str(datetime.now()),&#xa;}&#xa;BASE_TEST_ENDPOINT = &quot;/api/v1/{}&quot;" link="import uuid&#xa;from datetime import datetime&#xa;&#xa;&#xa;BASE_TEST_HEADER = {&#xa;    &quot;System-Id&quot;: str(uuid.uuid4()),&#xa;    &quot;Request-Id&quot;: str(uuid.uuid4()),&#xa;    &quot;Request-Time&quot;: str(datetime.now()),&#xa;}&#xa;BASE_TEST_ENDPOINT = &quot;/api/v1/{}&quot;" id="SYt-TXJ_Hw24SwqiqHZK-29">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="550" y="80" width="240" height="170" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
