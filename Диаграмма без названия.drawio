@@ -9,6 +9,14 @@
             <mxGeometry x="50" y="40" width="560" height="2700" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="SYt-TXJ_Hw24SwqiqHZK-7" value="class Singleton(type):&#xa;    _instances = {}&#xa;&#xa;&#xa;    def __call__(cls, *args, **kwargs):&#xa;        if cls not in cls._instances:&#xa;            cls._instances[cls] = super().__call__(*args, **kwargs)&#xa;        return cls._instances[cls]" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="360" height="140" as="geometry" />
+        </mxCell>
+        <UserObject label="import uvicorn&#xa;&#xa;&#xa;from aigw_service.api import app_main&#xa;from aigw_service.config import APP_CONFIG&#xa;from aigw_service.logger.uvicorn_logging_config import LOGGING_CONFIG&#xa;&#xa;&#xa;&#xa;&#xa;def main():&#xa;    uvicorn.run(&#xa;        app_main,&#xa;        host=APP_CONFIG.app.app_host,&#xa;        port=APP_CONFIG.app.app_port,&#xa;        access_log=False,&#xa;        log_config=LOGGING_CONFIG,&#xa;    )&#xa;&#xa;&#xa;&#xa;&#xa;if __name__ == &quot;__main__&quot;:&#xa;    main()" link="import uvicorn&#xa;&#xa;&#xa;from aigw_service.api import app_main&#xa;from aigw_service.config import APP_CONFIG&#xa;from aigw_service.logger.uvicorn_logging_config import LOGGING_CONFIG&#xa;&#xa;&#xa;&#xa;&#xa;def main():&#xa;    uvicorn.run(&#xa;        app_main,&#xa;        host=APP_CONFIG.app.app_host,&#xa;        port=APP_CONFIG.app.app_port,&#xa;        access_log=False,&#xa;        log_config=LOGGING_CONFIG,&#xa;    )&#xa;&#xa;&#xa;&#xa;&#xa;if __name__ == &quot;__main__&quot;:&#xa;    main()" id="SYt-TXJ_Hw24SwqiqHZK-8">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="720" y="510" width="440" height="370" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
