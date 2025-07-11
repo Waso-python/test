@@ -4,6 +4,11 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <UserObject label="import asyncio&#xa;&#xa;&#xa;import pytest&#xa;&#xa;&#xa;&#xa;&#xa;@pytest.fixture(scope=&quot;session&quot;)&#xa;def event_loop(request):&#xa;    &quot;&quot;&quot;Create an instance of the default event loop for each test case.&quot;&quot;&quot;&#xa;    loop = asyncio.get_event_loop_policy().new_event_loop()&#xa;    yield loop&#xa;    loop.close()&#xa;&#xa;&#xa;&#xa;&#xa;pytest_plugins = [&#xa;    &quot;fixtures.fixture_v1_client_session&quot;,&#xa;]" link="import asyncio&#xa;&#xa;&#xa;import pytest&#xa;&#xa;&#xa;&#xa;&#xa;@pytest.fixture(scope=&quot;session&quot;)&#xa;def event_loop(request):&#xa;    &quot;&quot;&quot;Create an instance of the default event loop for each test case.&quot;&quot;&quot;&#xa;    loop = asyncio.get_event_loop_policy().new_event_loop()&#xa;    yield loop&#xa;    loop.close()&#xa;&#xa;&#xa;&#xa;&#xa;pytest_plugins = [&#xa;    &quot;fixtures.fixture_v1_client_session&quot;,&#xa;]" id="SYt-TXJ_Hw24SwqiqHZK-27">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="60" y="60" width="410" height="330" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
