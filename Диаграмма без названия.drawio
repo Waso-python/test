@@ -22,6 +22,9 @@
             <mxGeometry x="1780" y="170" width="400" height="810" as="geometry" />
           </mxCell>
         </UserObject>
+        <mxCell id="SYt-TXJ_Hw24SwqiqHZK-13" value="import contextlib&#xa;import typing as tp&#xa;&#xa;&#xa;from fastapi import FastAPI&#xa;&#xa;&#xa;from .metric_router import router as metric_router&#xa;from .middleware import log_requests&#xa;from .os_router import router as service_router&#xa;from .v1 import router as v1_router&#xa;&#xa;&#xa;&#xa;&#xa;@contextlib.asynccontextmanager&#xa;async def lifespan(_) -&gt; tp.AsyncContextManager:&#xa;    from aigw_service.context import APP_CTX&#xa;&#xa;&#xa;    await APP_CTX.on_startup()&#xa;    yield&#xa;    await APP_CTX.on_shutdown()&#xa;&#xa;&#xa;&#xa;&#xa;app_main = FastAPI(title=&quot;Basic App&quot;, lifespan=lifespan)&#xa;app_main.middleware(&quot;http&quot;)(log_requests)&#xa;app_main.include_router(service_router, tags=[&quot;Openshift aigw_service routes&quot;])&#xa;app_main.include_router(metric_router, tags=[&quot;Like/dislike metric aigw_service routes&quot;])&#xa;app_main.include_router(v1_router, prefix=&quot;/api/v1&quot;, tags=[&quot;aigw_service&quot;])&#xa;&#xa;&#xa;__all__ = [&#xa;    &quot;app_main&quot;,&#xa;]" style="text;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="2280" y="160" width="500" height="560" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
