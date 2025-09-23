@@ -24,6 +24,11 @@
             <mxGeometry x="1710" y="480" width="560" height="6030" as="geometry" />
           </mxCell>
         </UserObject>
+        <UserObject label="from datetime import datetime, timezone, timedelta&#xa;&#xa;&#xa;def request_time_header(offset_hours: int = 3) -&gt; str:&#xa;    &quot;&quot;&quot;Возвращает строку формата &#39;Request-Time: 2025-08-25T22:58:32.469340+03:00&#39;.&quot;&quot;&quot;&#xa;    tz = timezone(timedelta(hours=offset_hours))&#xa;    now = datetime.now(tz)  # TZ-aware&#xa;    # isoformat уже включает оффсет как +HH:MM, микросекунды идут по умолчанию&#xa;    return f&quot;Request-Time: {now.isoformat()}&quot;" link="from datetime import datetime, timezone, timedelta&#xa;&#xa;&#xa;def request_time_header(offset_hours: int = 3) -&gt; str:&#xa;    &quot;&quot;&quot;Возвращает строку формата &#39;Request-Time: 2025-08-25T22:58:32.469340+03:00&#39;.&quot;&quot;&quot;&#xa;    tz = timezone(timedelta(hours=offset_hours))&#xa;    now = datetime.now(tz)  # TZ-aware&#xa;    # isoformat уже включает оффсет как +HH:MM, микросекунды идут по умолчанию&#xa;    return f&quot;Request-Time: {now.isoformat()}&quot;" id="xQ9-_gr5QTslfE1LpaSg-2">
+          <mxCell style="text;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="1600" y="730" width="520" height="150" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
